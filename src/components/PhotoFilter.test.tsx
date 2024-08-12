@@ -1,23 +1,25 @@
-// import { fireEvent, render, screen } from "@testing-library/react";
-// import { describe, expect, it } from "vitest";
-// import CountButton from "./PhotoFilter";
+import { render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import PhotoFilter from "./PhotoFilter";
 
-// describe("CountButton", () => {
-//   it("should start at 0", () => {
-//     // Arrange/Act
-//     render(<CountButton />);
+describe("PhotoFilter", () => {
+  it("should render a list of buttons", () => {
+    render(<PhotoFilter />);
 
-//     // Assert
-//     expect(screen.getByRole("button")).toHaveTextContent("count is 0");
-//   });
-
-//   it("should increment count when clicked", () => {
-//     render(<CountButton />);
-//     fireEvent.click(screen.getByRole("button"));
-//     expect(screen.getByRole("button")).toHaveTextContent(/1/);
-
-//     fireEvent.click(screen.getByRole("button"));
-//     fireEvent.click(screen.getByRole("button"));
-//     expect(screen.getByRole("button")).toHaveTextContent(/3/);
-//   });
-// });
+    const buttonTexts = [
+      "Nature",
+      "City",
+      "Black & White",
+      "People",
+      "Food",
+      "Sports",
+      "Animals",
+      "Ilustrations",
+      "Health & Wellnes",
+    ];
+    buttonTexts.forEach((text) => {
+      const button = screen.getByText(text);
+      expect(button).toBeInTheDocument();
+    });
+  });
+});
