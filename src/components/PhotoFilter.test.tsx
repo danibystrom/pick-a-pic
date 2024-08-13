@@ -4,8 +4,7 @@ import PhotoFilter from "./PhotoFilter";
 
 describe("PhotoFilter", () => {
   it("should render a list of buttons", () => {
-    render(<PhotoFilter />);
-
+    render(<PhotoFilter onFilterChange={() => {}} />);
     const buttonTexts = [
       "Nature",
       "City",
@@ -16,6 +15,7 @@ describe("PhotoFilter", () => {
       "Animals",
       "Ilustrations",
       "Health & Wellnes",
+      "All",
     ];
     buttonTexts.forEach((text) => {
       const button = screen.getByText(text);

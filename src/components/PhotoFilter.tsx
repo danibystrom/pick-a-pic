@@ -1,37 +1,27 @@
 import { Box, Button, ButtonGroup } from "@mui/material";
 
-const buttons = [
-  <Button key="one" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Nature
-  </Button>,
-  <Button key="two" sx={{ borderColor: "#242424", color: "#242424" }}>
-    City
-  </Button>,
-  <Button key="three" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Black & White
-  </Button>,
-  <Button key="four" sx={{ borderColor: "#242424", color: "#242424" }}>
-    People
-  </Button>,
-  <Button key="five" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Food
-  </Button>,
-  <Button key="six" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Sports
-  </Button>,
+interface PhotoFilterProps {
+  onFilterChange: (category: string) => void;
+}
 
-  <Button key="seven" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Animals
-  </Button>,
-  <Button key="eight" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Ilustrations
-  </Button>,
-  <Button key="nine" sx={{ borderColor: "#242424", color: "#242424" }}>
-    Health & Wellnes
-  </Button>,
+const buttons = [
+  "Nature",
+  "City",
+  "Black & White",
+  "People",
+  "Food",
+  "Sports",
+  "Animals",
+  "Ilustrations",
+  "Health & Wellnes",
+  "All",
 ];
 
-function PhotoFilter() {
+function PhotoFilter({ onFilterChange }: PhotoFilterProps) {
+  const handleClick = (category: string) => {
+    onFilterChange(category);
+  };
+
   return (
     <Box
       sx={{
@@ -45,7 +35,15 @@ function PhotoFilter() {
       }}
     >
       <ButtonGroup size="large" aria-label="Large button group">
-        {buttons}
+        {buttons.map((text) => (
+          <Button
+            key={text}
+            sx={{ borderColor: "#242424", color: "#242424" }}
+            onClick={() => handleClick(text)}
+          >
+            {text}
+          </Button>
+        ))}
       </ButtonGroup>
     </Box>
   );

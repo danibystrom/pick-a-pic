@@ -65,39 +65,94 @@ export const photos: Photo[] = [
     url: "https://plus.unsplash.com/premium_photo-1680582107403-04dfac02efc3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "City",
   },
-  //   {
-  //     id: 13,
-  //     url: "image1.jpg",
-  //     category: "Nature",
-  //   },
-  //   {
-  //     id: 14,
-  //     url: "image2.jpg",
-  //     category: "City",
-  //   },
-  //   {
-  //     id: 15,
-  //     url: "image3.jpg",
-  //     category: "Nature",
-  //   },
-  //   {
-  //     id: 16,
-  //     url: "image4.jpg",
-  //     category: "City",
-  //   },
-  //   {
-  //     id: 17,
-  //     url: "image1.jpg",
-  //     category: "Nature",
-  //   },
-  //   {
-  //     id: 18,
-  //     url: "image2.jpg",
-  //     category: "City",
-  //   },
-  //   {
-  //     id: 19,
-  //     url: "image3.jpg",
-  //     category: "Nature",
-  //   },
+  {
+    id: 13,
+    url: "https://images.unsplash.com/photo-1532517308734-0565178471d2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 14,
+    url: "https://images.unsplash.com/photo-1496670013738-4f730477bfdb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 15,
+    url: "https://images.unsplash.com/photo-1641186947534-85101ecda19c?q=80&w=2877&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 16,
+    url: "https://images.unsplash.com/photo-1533973837628-525f33317880?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 17,
+    url: "https://images.unsplash.com/photo-1574539325628-40b46e116b82?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 18,
+    url: "https://images.unsplash.com/photo-1471249712914-46b88975a227?q=80&w=2736&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 19,
+    url: "https://images.unsplash.com/photo-1467779009031-53938b78ca38?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 20,
+    url: "https://images.unsplash.com/photo-1598341998690-5a7e234ed6aa?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 21,
+    url: "https://plus.unsplash.com/premium_photo-1690443475241-2da4e318834b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 22,
+    url: "https://plus.unsplash.com/premium_photo-1672770392735-6a048ccfeecf?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Black & White",
+  },
+  {
+    id: 23,
+    url: "https://images.unsplash.com/photo-1495837174058-628aafc7d610?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 24,
+    url: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 25,
+    url: "https://images.unsplash.com/photo-1422565167033-dec8fad92aba?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 26,
+    url: "https://plus.unsplash.com/premium_photo-1673530703453-f9b1f29a5493?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 27,
+    url: "https://images.unsplash.com/photo-1484446991649-77f7fbd73f1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 28,
+    url: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 29,
+    url: "https://plus.unsplash.com/premium_photo-1668061706855-26d4cf0f6248?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "People",
+  },
+  {
+    id: 30,
+    url: "https://plus.unsplash.com/premium_photo-1722988828777-965588034b66?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Food",
+  },
 ];
