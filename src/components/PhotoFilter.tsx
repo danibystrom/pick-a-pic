@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 interface PhotoFilterProps {
   onFilterChange: (category: string) => void;
@@ -26,25 +26,30 @@ function PhotoFilter({ onFilterChange }: PhotoFilterProps) {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: 2,
         margin: 3,
-        "& > *": {
-          m: 3,
-        },
       }}
     >
-      <ButtonGroup size="large" aria-label="Large button group">
-        {buttons.map((text) => (
-          <Button
-            key={text}
-            sx={{ borderColor: "#242424", color: "#242424" }}
-            onClick={() => handleClick(text)}
-          >
-            {text}
-          </Button>
-        ))}
-      </ButtonGroup>
+      {buttons.map((text) => (
+        <Button
+          key={text}
+          onClick={() => handleClick(text)}
+          sx={{
+            color: "#242424",
+            textTransform: "none",
+            border: "none",
+            padding: "10px 20px",
+            boxShadow: "none",
+            "&:hover": {
+              backgroundColor: "#f0f0f0",
+            },
+          }}
+        >
+          <Typography>{text}</Typography>
+        </Button>
+      ))}
     </Box>
   );
 }

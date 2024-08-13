@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1723533239119" clover="3.2.0">
-  <project timestamp="1723533239119" name="All files">
+<coverage generated="1723534172092" clover="3.2.0">
+  <project timestamp="1723534172092" name="All files">
     <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11" elements="29" coveredelements="29" complexity="0" loc="16" ncloc="16" packages="3" files="4" classes="4"/>
     <package name="src">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -15,17 +15,17 @@
       <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
       <file name="PhotoFilter.tsx" path="C:/Users/danie/OneDrive/Skrivbord/Skola/Testning/pick-a-pic/src/components/PhotoFilter.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
-        <line num="42" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
       </file>
       <file name="PhotoGallery.tsx" path="C:/Users/danie/OneDrive/Skrivbord/Skola/Testning/pick-a-pic/src/components/PhotoGallery.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="60" type="stmt"/>
-        <line num="13" count="219" type="stmt"/>
+        <line num="13" count="215" type="stmt"/>
         <line num="14" count="60" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="19" count="4" type="cond" truecount="2" falsecount="0"/>
