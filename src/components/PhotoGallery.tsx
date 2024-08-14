@@ -1,5 +1,5 @@
-import { Box, Grid } from "@mui/material";
-import React from "react";
+import { Box, Grid, Modal } from "@mui/material";
+import React, { useState } from "react";
 import { photos } from "../data/data.ts";
 
 interface PhotoGalleryProps {
@@ -15,6 +15,19 @@ const shuffleArray = (array: any[]) => {
 };
 
 const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
+  const [open, setOpen] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+
+  const handleOpen = (photoUrl: string) => {
+    setSelectedPhoto(photoUrl);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedPhoto(null);
+  };
+
   const filteredPhotos =
     filter === "All"
       ? shuffleArray(photos)
@@ -33,11 +46,48 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
                 objectFit: "cover",
               }}
               src={photo.url}
-              alt={photo.category}
+              alt={photo.alt}
+              onClick={() => handleOpen(photo.url)}
             />
           </Grid>
         ))}
       </Grid>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "80%",
+            maxHeight: "80%",
+            overflow: "auto",
+            bgcolor: "background.paper",
+            border: "2px solid #000",
+            boxShadow: 24,
+            p: 2,
+            textAlign: "center",
+          }}
+        >
+          {selectedPhoto && (
+            <Box
+              component="img"
+              sx={{
+                maxWidth: "100%",
+                maxHeight: "80vh",
+                objectFit: "contain",
+              }}
+              src={selectedPhoto}
+              alt="Selected"
+            />
+          )}
+        </Box>
+      </Modal>
     </Box>
   );
 };

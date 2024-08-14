@@ -1,18 +1,62 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import App from "./App";
+import PhotoGallery from "./components/PhotoGallery";
+import { photos } from "./data/data";
 
 describe("App", () => {
   it("should filter photos based on category-clicks", () => {
     render(<App />);
 
-    fireEvent.click(screen.getByText("Nature"));
-    expect(screen.getAllByAltText("Nature").length).toBeGreaterThan(0);
+    const natureButton = screen.getByText("Nature");
+    fireEvent.click(natureButton);
 
-    fireEvent.click(screen.getByText("City"));
-    expect(screen.getAllByAltText("City").length).toBeGreaterThan(0);
+    const naturePhotos = photos.filter((photo) => photo.category === "Nature");
+    let displayedPhotos = screen.getAllByRole("img");
+
+    expect(displayedPhotos.length).toBe(naturePhotos.length);
+
+    displayedPhotos.forEach((img) => {
+      expect(img).toHaveAttribute("alt", expect.stringMatching(/^Nature \d+$/));
+      expect(img).not.toHaveAttribute("alt", "City");
+    });
+
+    const cityButton = screen.getByText("City");
+    fireEvent.click(cityButton);
+
+    const cityPhotos = photos.filter((photo) => photo.category === "City");
+    displayedPhotos = screen.getAllByRole("img");
+
+    expect(displayedPhotos.length).toBe(cityPhotos.length);
+
+    displayedPhotos.forEach((img) => {
+      expect(img).toHaveAttribute("alt", expect.stringMatching(/^City \d+$/));
+      expect(img).not.toHaveAttribute("alt", "Food");
+    });
+  });
+
+  it("should display all photos when 'All' is selected", () => {
+    render(<App />);
 
     fireEvent.click(screen.getByText("All"));
-    expect(screen.getAllByRole("img").length).toBeGreaterThan(0);
+
+    const displayedPhotos = screen.getAllByRole("img");
+
+    expect(displayedPhotos.length).toBe(photos.length);
+  });
+
+  it("should open modal and display correct image when an image is clicked", () => {
+    // Arrange
+    const { url, alt } = photos[0];
+    render(<PhotoGallery filter="All" />);
+
+    // Act
+    const imgElement = screen.getByAltText(alt);
+    fireEvent.click(imgElement);
+
+    // Assert
+    const modalImgElement = screen.getByAltText("Selected");
+    expect(modalImgElement).toBeInTheDocument();
+    expect(modalImgElement).toHaveAttribute("src", url);
   });
 });
