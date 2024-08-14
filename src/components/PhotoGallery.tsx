@@ -1,5 +1,5 @@
 import { Box, Grid, Modal } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { photos } from "../data/data.ts";
 
 interface PhotoGalleryProps {
@@ -17,6 +17,15 @@ const shuffleArray = (array: any[]) => {
 const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
   const [open, setOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [filteredPhotos, setFilteredPhotos] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (filter === "All") {
+      setFilteredPhotos(shuffleArray(photos));
+    } else {
+      setFilteredPhotos(photos.filter((photo) => photo.category === filter));
+    }
+  }, [filter]);
 
   const handleOpen = (photoUrl: string) => {
     setSelectedPhoto(photoUrl);
@@ -27,11 +36,6 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
     setOpen(false);
     setSelectedPhoto(null);
   };
-
-  const filteredPhotos =
-    filter === "All"
-      ? shuffleArray(photos)
-      : photos.filter((photo) => photo.category === filter);
 
   return (
     <Box sx={{ flexGrow: 1, padding: 0, margin: 0 }}>
@@ -64,14 +68,16 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "80%",
-            maxHeight: "80%",
-            overflow: "auto",
-            bgcolor: "background.paper",
-            border: "2px solid #000",
-            boxShadow: 24,
-            p: 2,
-            textAlign: "center",
+            padding: 0,
+            margin: 0,
+            width: "auto",
+            height: "auto",
+            maxWidth: "100vw",
+            maxHeight: "100vh",
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           {selectedPhoto && (
@@ -79,7 +85,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ filter }) => {
               component="img"
               sx={{
                 maxWidth: "100%",
-                maxHeight: "80vh",
+                maxHeight: "100%",
                 objectFit: "contain",
               }}
               src={selectedPhoto}

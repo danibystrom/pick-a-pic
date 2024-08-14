@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.23% </span>
+                <span class="strong">90.47% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/17</span>
+                <span class='fraction'>19/21</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.23% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/17</span>
+                <span class='fraction'>18/20</span>
             </div>
         
             
@@ -158,7 +158,13 @@
 <a name='L93'></a><a href='#L93'>93</a>
 <a name='L94'></a><a href='#L94'>94</a>
 <a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,33 +173,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">120x</span>
-<span class="cline-any cline-yes">438x</span>
+<span class="cline-any cline-yes">444x</span>
 <span class="cline-any cline-yes">120x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">90x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">60x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -208,6 +218,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -254,7 +266,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Box, Grid, Modal } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { photos } from "../data/data.ts";
 &nbsp;
 interface PhotoGalleryProps {
@@ -272,6 +284,15 @@ const shuffleArray = (array: any[]) =&gt; {
 const PhotoGallery: React.FC&lt;PhotoGalleryProps&gt; = ({ filter }) =&gt; {
   const [open, setOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState&lt;string | null&gt;(null);
+  const [filteredPhotos, setFilteredPhotos] = useState&lt;any[]&gt;([]);
+&nbsp;
+  useEffect(() =&gt; {
+    if (filter === "All") {
+      setFilteredPhotos(shuffleArray(photos));
+    } else {
+      setFilteredPhotos(photos.filter((photo) =&gt; photo.category === filter));
+    }
+  }, [filter]);
 &nbsp;
   const handleOpen = (photoUrl: string) =&gt; {
     setSelectedPhoto(photoUrl);
@@ -282,11 +303,6 @@ const PhotoGallery: React.FC&lt;PhotoGalleryProps&gt; = ({ filter }) =&gt; {
 <span class="cstat-no" title="statement not covered" >    setOpen(false);</span>
 <span class="cstat-no" title="statement not covered" >    setSelectedPhoto(null);</span>
   };
-&nbsp;
-  const filteredPhotos =
-    filter === "All"
-      ? shuffleArray(photos)
-      : photos.filter((photo) =&gt; photo.category === filter);
 &nbsp;
   return (
     &lt;Box sx={{ flexGrow: 1, padding: 0, margin: 0 }}&gt;
@@ -319,14 +335,16 @@ const PhotoGallery: React.FC&lt;PhotoGalleryProps&gt; = ({ filter }) =&gt; {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "80%",
-            maxHeight: "80%",
-            overflow: "auto",
-            bgcolor: "background.paper",
-            border: "2px solid #000",
-            boxShadow: 24,
-            p: 2,
-            textAlign: "center",
+            padding: 0,
+            margin: 0,
+            width: "auto",
+            height: "auto",
+            maxWidth: "100vw",
+            maxHeight: "100vh",
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         &gt;
           {selectedPhoto &amp;&amp; (
@@ -334,7 +352,7 @@ const PhotoGallery: React.FC&lt;PhotoGalleryProps&gt; = ({ filter }) =&gt; {
               component="img"
               sx={{
                 maxWidth: "100%",
-                maxHeight: "80vh",
+                maxHeight: "100%",
                 objectFit: "contain",
               }}
               src={selectedPhoto}
@@ -355,7 +373,7 @@ export default PhotoGallery;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-08-14T11:50:02.089Z
+                at 2024-08-14T12:16:33.185Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
