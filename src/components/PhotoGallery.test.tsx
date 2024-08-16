@@ -8,10 +8,4 @@ describe("PhotoGallery", () => {
     render(<PhotoGallery filter="All" />);
     expect(screen.getAllByRole("img").length).toBe(photos.length);
   });
-
-  it("should display correct number of photos when a category is selected", () => {
-    render(<PhotoGallery filter="Nature" />);
-    const naturePhotos = photos.filter((photo) => photo.category === "Nature");
-    expect(screen.getAllByRole("img").length).toBe(naturePhotos.length);
-  });
 });

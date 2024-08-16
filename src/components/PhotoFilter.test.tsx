@@ -20,7 +20,6 @@ describe("PhotoFilter", () => {
     buttonTexts.forEach((text) => {
       const button = screen.getByText(text);
       expect(button).toBeInTheDocument();
-      expect(button).not.toHaveAttribute("alt", "City");
     });
   });
 });

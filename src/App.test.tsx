@@ -1,3 +1,7 @@
+
+
+
+
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import App from "./App";
@@ -35,28 +39,21 @@ describe("App", () => {
     });
   });
 
-  it("should display all photos when 'All' is selected", () => {
-    render(<App />);
-
-    fireEvent.click(screen.getByText("All"));
-
-    const displayedPhotos = screen.getAllByRole("img");
-
-    expect(displayedPhotos.length).toBe(photos.length);
-  });
-
   it("should open modal and display correct image when an image is clicked", () => {
-    // Arrange
-    const { url, alt } = photos[0];
     render(<PhotoGallery filter="All" />);
+    const { url, alt } = photos[0];
 
-    // Act
     const imgElement = screen.getByAltText(alt);
     fireEvent.click(imgElement);
 
-    // Assert
     const modalImgElement = screen.getByAltText("Selected");
     expect(modalImgElement).toBeInTheDocument();
     expect(modalImgElement).toHaveAttribute("src", url);
   });
 });
+
+
+
+
+
+
